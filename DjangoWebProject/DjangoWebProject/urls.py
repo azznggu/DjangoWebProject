@@ -15,7 +15,8 @@ import HelloDjangoApp.views
 
 urlpatterns = [
         url(r'^$', HelloDjangoApp.views.index, name = 'index'),
-        url(r'^home$', HelloDjangoApp.views.home, name = 'index'),
+        url(r'^home$', HelloDjangoApp.views.home, name = 'home'),
+        url(r'^about$', HelloDjangoApp.views.about, name = 'about'),
 ]
 
 

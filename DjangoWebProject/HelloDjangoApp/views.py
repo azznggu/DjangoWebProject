@@ -7,11 +7,25 @@ from datetime import datetime
 def index(request) :
     now = datetime.now()
     
-    html_content = '<html><head><title>hello django test</title></head><body>'
-    html_content += '<strong>datetime</strong> on ' + now.strftime('%A, %d, %B, %Y at %X')
-    html_content += '</body></html>'
-
-    return HttpResponse(html_content)
+    return render(
+        request,
+        'index.html', # Relative path from the 'templates' folder to the template file
+        {
+            'title':'Django',
+            'message':'Hello Django!',
+            'content': now.strftime("%A, %d %B, %Y at %X")    
+        }
+    )
 
 def home(request) :
     return HttpResponse("Hello, home!")
+
+def about(request) :
+    return render(
+        request,
+        'about.html',
+        {
+         'title':'About HelloDjangoApp',
+         'content':'Sample page for Django.'
+        }
+    )
