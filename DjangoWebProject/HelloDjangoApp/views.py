@@ -9,7 +9,7 @@ def index(request) :
     
     return render(
         request,
-        'index.html', # Relative path from the 'templates' folder to the template file
+        'HelloDjangoApp/index.html', # Relative path from the 'templates' folder to the template file
         {
             'title':'Django',
             'message':'Hello Django!',
@@ -23,7 +23,7 @@ def home(request) :
 def about(request) :
     return render(
         request,
-        'about.html',
+        'HelloDjangoApp/about.html',
         {
          'title':'About HelloDjangoApp',
          'content':'Sample page for Django.'
