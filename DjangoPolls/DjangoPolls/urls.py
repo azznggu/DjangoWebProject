@@ -13,7 +13,7 @@ import app.views
 admin.autodiscover()
 
 urlpatterns = [
-    url(r'^', include('app.urls', namespace="app")),
+    url(r'^', include('app.urls', namespace="app")),    
     url(r'^contact$', app.views.contact, name='contact'),
     url(r'^about', app.views.about, name='about'),
     url(r'^seed', app.views.seed, name='seed'),
